@@ -3,7 +3,7 @@
 For the original dataset codebook please refer to the README.txt file that can be found within the zip file of the original dataset:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The average_dataset.csv has a total of 88 columns:
+The average_dataset.txt has a total of 88 columns:
 
 The first two columns are the identifiers namely:
   1. `participantid` - Which is the anonymous index of one of the 30 participants of the experiment
