@@ -30,7 +30,7 @@ subjectall<-rbind(subjecttrain,subjecttest)
 #column bind the x data with the participant id and activity labels in the y datasets
 finaldata<-cbind(xall,yall,subjectall)
 
-#remove all unnecessary intermediate raw data from memory
+#remove all unnecessary intermediate raw data from memoryfeatures
 remove(xall,yall,subjectall,subjecttrain,subjecttest,xtest,ytest,xtrain,ytrain)
 ##################################################################################
 #filter finaldata to only look at features which have either mean or std in their names
@@ -56,5 +56,5 @@ datameanstd$activity<-sapply(datameanstd$activity,activitymapfunction)
 #this line groups the data according to participant and activity and applies column means 
 averagedf <- ddply(datameanstd, .(participantid, activity), function(x) colMeans(x[, 1:86]))
 
-write.csv(averagedf,'average_dataset.csv',row.names = FALSE)
+write.table(averagedf,'average_dataset.txt',row.names = FALSE)
 
