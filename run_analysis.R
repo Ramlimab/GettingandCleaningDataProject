@@ -55,6 +55,7 @@ names(datameanstd)<-tolower(names(datameanstd))
 activitymapfunction<-function(x) activitylabels$activity[x]
 datameanstd$activity<-sapply(datameanstd$activity,activitymapfunction)
 
+####################################################################################
 #this line groups the data according to participant and activity and applies column means 
 averagedf <- ddply(datameanstd, .(participantid, activity), function(x) colMeans(x[, 1:86]))
 
